@@ -10,7 +10,6 @@ public class IncomingPingListener {
     public void onServerlistPing(ProxyPingEvent event) {
         final ServerPing ping = event.getPing();
         event.setPing(ping.asBuilder().maximumPlayers(ping.asBuilder().getOnlinePlayers() + 1).build());
-        System.out.println("Incoming ping!");
     }
 
 }
